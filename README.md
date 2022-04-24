@@ -1,0 +1,2 @@
+# Separator
+Func _GetSeparator($sString)     Local $d, $s     For $x = 1 To 9 Step 2         For $i = 1 To 31             $s = ''             $d = 1             For $z = 1 To $x                 If $d Then                     $d = 0                 Else                     $d = 1                 EndIf                 $s &amp;= Chr($i + $d)             Next             If Not StringInStr($sString, $s) Then Return $s         Next     Next     Return SetError(1) EndFunc   ;==>_GetSeparator
